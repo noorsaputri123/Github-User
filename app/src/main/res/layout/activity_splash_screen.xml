@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".splash.SplashScreenActivity">
+
     <ImageView
         android:id="@+id/img_gif"
-        android:contentDescription="@string/splashscreen"
         android:layout_width="135dp"
         android:layout_height="125dp"
         android:layout_marginTop="65dp"
         android:layout_marginBottom="66dp"
+        android:contentDescription="@string/splashscreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
