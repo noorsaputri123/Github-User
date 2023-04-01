@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.rie.githubuser.fragment.FollowFragment
 
+//Noor Saputri
 class SectionPageAdapter (activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 
     var username: String = ""

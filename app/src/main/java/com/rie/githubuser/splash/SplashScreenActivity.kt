@@ -8,6 +8,7 @@ import android.os.Looper
 import com.rie.githubuser.R
 import com.rie.githubuser.activity.MainActivity
 
+//Noor Saputri
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

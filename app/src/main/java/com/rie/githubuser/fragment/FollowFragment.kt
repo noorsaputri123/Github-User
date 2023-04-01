@@ -8,14 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.rie.githubuser.R
 import com.rie.githubuser.activity.DetailActivity
 import com.rie.githubuser.adapter.ListSearchAdapter
 import com.rie.githubuser.databinding.FragmentFollowBinding
+//import com.rie.githubuser.databinding.FragmentFollowBinding
 import com.rie.githubuser.response.ItemsSearch
 import com.rie.githubuser.viewmodel.DetailViewModel
 
 
+//Noor Saputri
 class FollowFragment : Fragment() {
 
     private var _binding: FragmentFollowBinding? = null
@@ -26,19 +27,23 @@ class FollowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvFollow.layoutManager = LinearLayoutManager(activity)
-        when(arguments?.getInt(ARG_SECTION_NUMBER, 0)){
+        when (arguments?.getInt(ARG_SECTION_NUMBER, 0)) {
             1 -> {
                 detailViewModel.getFollowers(arguments?.getString(USERNAME))
                 detailViewModel.followers.observe(requireActivity()) { users ->
                     setUserData(users)
                 }
+                detailViewModel.isLoading.observe(viewLifecycleOwner) {showLoading(it)}
             }
+
             2 -> {
                 detailViewModel.getFollowing(arguments?.getString(USERNAME))
                 detailViewModel.following.observe(requireActivity()) { users ->
                     setUserData(users)
                 }
+                detailViewModel.isLoading.observe(viewLifecycleOwner) {showLoading(it)}
             }
+
         }
     }
 
@@ -75,5 +80,12 @@ class FollowFragment : Fragment() {
     companion object {
         const val ARG_SECTION_NUMBER = "section_number"
         const val USERNAME = "username"
+    }
+    private fun showLoading(isLoading: Boolean) {
+        if (isLoading) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 }

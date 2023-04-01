@@ -1,5 +1,7 @@
 package com.rie.githubuser.config
 
+
+//Noor Saputri
 open class Event<out T>(private val content: T) {
 
     @Suppress("MemberVisibilityCanBePrivate")
@@ -15,5 +17,4 @@ open class Event<out T>(private val content: T) {
         }
     }
 
-    fun peekContent(): T = content
 }

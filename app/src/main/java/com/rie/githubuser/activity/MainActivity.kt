@@ -19,6 +19,7 @@ import com.rie.githubuser.databinding.ActivityMainBinding
 import com.rie.githubuser.response.ItemsSearch
 import com.rie.githubuser.viewmodel.MainViewModel
 
+//Noor Saputri
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

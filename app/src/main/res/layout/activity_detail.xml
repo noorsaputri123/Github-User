@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <View
             android:id="@+id/view"
             android:layout_width="wrap_content"
@@ -111,10 +112,10 @@
             android:layout_height="wrap_content"
             android:progressTint="@color/white"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/view_pager"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/view"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

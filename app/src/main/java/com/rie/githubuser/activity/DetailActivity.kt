@@ -14,6 +14,7 @@ import com.rie.githubuser.databinding.ActivityDetailBinding
 import com.rie.githubuser.response.ResponseSearchDetail
 import com.rie.githubuser.viewmodel.DetailViewModel
 
+//Noor Saputri
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
@@ -51,11 +52,14 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setUserData(user: ResponseSearchDetail) {
-        binding.tvName.text = user.name
-        binding.tvUsername.text = user.login
-        binding.tvCompany.text = user.company
-        binding.tvLocation.text = user.location
-        binding.tvRepository.text = resources.getString(R.string.publicrepos, user.publicRepos)
+        binding.apply {
+            tvName.text = user.name
+            tvUsername.text = user.login
+            tvCompany.text = user.company
+            tvLocation.text = user.location
+            tvRepository.text = resources.getString(R.string.publicrepos, user.publicRepos)
+        }
+
         Glide.with(this)
             .load(user.avatarUrl)
             .circleCrop()
@@ -78,4 +82,5 @@ class DetailActivity : AppCompatActivity() {
             R.string.tab_2
         )
     }
+
 }

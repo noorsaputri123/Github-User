@@ -2,6 +2,8 @@ package com.rie.githubuser.response
 
 import com.google.gson.annotations.SerializedName
 
+
+//Noor Saputri
 data class ResponseSearch(
 
     @field:SerializedName("total_count")

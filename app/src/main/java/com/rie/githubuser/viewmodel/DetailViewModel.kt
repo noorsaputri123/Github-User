@@ -13,6 +13,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
+//Noor Saputri
 class DetailViewModel : ViewModel() {
 
     private val _userDetail = MutableLiveData<ResponseSearchDetail>()
@@ -38,8 +39,9 @@ class DetailViewModel : ViewModel() {
                 call: Call<List<ItemsSearch>>,
                 response: Response<List<ItemsSearch>>
             ) {
-                _isLoading.value = false
+
                 if (response.isSuccessful) {
+                    _isLoading.value = false
                     _followers.value = response.body()
                     _toastText.value = Event("Success")
                 } else {
@@ -61,8 +63,9 @@ class DetailViewModel : ViewModel() {
                 call: Call<List<ItemsSearch>>,
                 response: Response<List<ItemsSearch>>
             ) {
-                _isLoading.value = false
+
                 if (response.isSuccessful) {
+                    _isLoading.value = false
                     _following.value = response.body()
                 } else {
                     Log.e(TAG, "onFailure: gagal")
@@ -83,8 +86,9 @@ class DetailViewModel : ViewModel() {
                 call: Call<ResponseSearchDetail>,
                 response: Response<ResponseSearchDetail>
             ) {
-                _isLoading.value = false
+
                 if (response.isSuccessful) {
+                    _isLoading.value = false
                     _userDetail.value = response.body()
                 } else {
                     Log.e(TAG, "onFailure: gagal")
@@ -100,4 +104,6 @@ class DetailViewModel : ViewModel() {
     companion object{
         private const val TAG = "DetailViewModel"
     }
+
+
 }

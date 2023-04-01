@@ -3,6 +3,7 @@ package com.rie.githubuser.response
 
 import com.google.gson.annotations.SerializedName
 
+//Noor Saputri
 data class ResponseSearchDetail(
     @field:SerializedName("login")
     val login: String? = null,
@@ -12,9 +13,6 @@ data class ResponseSearchDetail(
 
     @field:SerializedName("public_repos")
     val publicRepos: Int? = null,
-
-//	@field:SerializedName("email")
-//	val email: Any? = null,
 
     @field:SerializedName("followers")
     val followers: Int? = null,

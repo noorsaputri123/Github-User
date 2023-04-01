@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.rie.githubuser.databinding.ItemRowUserBinding
 import com.rie.githubuser.response.ItemsSearch
 
+//Noor Saputri
 class ListSearchAdapter (private val listUser : ArrayList<ItemsSearch>): RecyclerView.Adapter<ListSearchAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
@@ -15,7 +16,7 @@ class ListSearchAdapter (private val listUser : ArrayList<ItemsSearch>): Recycle
         this.onItemClickCallback = onItemClickCallback
     }
 
-    class ListViewHolder(var binding: ItemRowUserBinding) : RecyclerView.ViewHolder(binding.root)
+   inner class ListViewHolder(var binding: ItemRowUserBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val binding = ItemRowUserBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
